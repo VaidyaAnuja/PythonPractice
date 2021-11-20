@@ -1,0 +1,21 @@
+li = []
+li_last = []
+display_list = []
+display_string = ""
+i = input('Enter a value   ')
+li=i.split()
+for x in li:
+    li_last.append(list(x))
+result = sum(li_last,[])
+for y in result:
+    if y=='a' or y=='e' or y=='i' or y=='o' or y=='u':
+        display_list.append('*')
+    elif y.isnumeric():
+        display_list.append(y)
+    elif y.isupper():
+        continue
+    else:
+        display_list.append(y)
+for ele in display_list: 
+        display_string += ele
+print(display_string)
